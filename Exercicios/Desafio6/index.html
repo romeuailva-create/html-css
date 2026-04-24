@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio06</title>
+  <style>
+    li {
+      position: relative;
+      cursor: pointer;
+    }
+
+    /* Tooltip escondido */
+    li span {
+      visibility: hidden;
+      background-color: darkblue;
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      left: 120px;
+      top: 0;
+      white-space: nowrap;
+    }
+
+    /* Mostra tooltip ao passar o mouse */
+    li:hover span {
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tags em HTML</h1>
+  <p>Passe o mouse sobre os termos para ver a tag correspondente.</p>
+  <ul>
+    <li>Parágrafo <span>&lt;p&gt;</span></li>
+    <li>Títulos <span>&lt;h1&gt;...&lt;h6&gt;</span></li>
+    <li>Imagens <span>&lt;img&gt;</span></li>
+    <li>Abreviações <span>&lt;abbr&gt;</span></li>
+    <li>Código fonte <span>&lt;code&gt;</span></li>
+    <li>Lista numerada <span>&lt;ol&gt;</span></li>
+    <li>Lista com marcadores <span>&lt;ul&gt;</span></li>
+  </ul>
+</body>
+</html>
