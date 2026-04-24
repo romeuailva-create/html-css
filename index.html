@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML5 e CSS3 — Romeu Pereira Oliveira</title>
+    <meta name="description" content="Exercícios e desafios do Curso de HTML5 e CSS3">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        header .author {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            font-size: 0.95rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .section-title .count {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-left: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            display: block;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .card:hover::before {
+            transform: translateX(0);
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card .name {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .card.desafio {
+            background: rgba(255, 107, 107, 0.15);
+            border-color: rgba(255, 107, 107, 0.3);
+        }
+
+        .card.desafio:hover {
+            background: rgba(255, 107, 107, 0.25);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px 20px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #feca57;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Curso de HTML5 e CSS3</h1>
+            <p class="subtitle">Exercícios e desafios em prática</p>
+            <span class="author">Por Romeu Pereira Oliveira</span>
+        </header>
+
+        <h2 class="section-title">Exercícios <span class="count">22 itens</span></h2>
+        <div class="grid">
+            <a href="Exercicios/Ex001/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 001</span></a>
+            <a href="Exercicios/ex002/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 002</span></a>
+            <a href="Exercicios/ex003/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 003</span></a>
+            <a href="Exercicios/ex004/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 004</span></a>
+            <a href="Exercicios/ex006/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 006</span></a>
+            <a href="Exercicios/ex007/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 007</span></a>
+            <a href="Exercicios/ex008/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 008</span></a>
+            <a href="Exercicios/ex008b/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 008b</span></a>
+            <a href="Exercicios/ex009/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 009</span></a>
+            <a href="Exercicios/ex009b/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 009b</span></a>
+            <a href="Exercicios/ex010/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 010</span></a>
+            <a href="Exercicios/ex011/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 011</span></a>
+            <a href="Exercicios/ex013/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 013</span></a>
+            <a href="Exercicios/ex014/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 014</span></a>
+            <a href="Exercicios/ex015/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 015</span></a>
+            <a href="Exercicios/ex016/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 016</span></a>
+            <a href="Exercicios/ex017/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 017</span></a>
+            <a href="Exercicios/ex018/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 018</span></a>
+            <a href="Exercicios/ex019/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 019</span></a>
+            <a href="Exercicios/ex020/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 020</span></a>
+            <a href="Exercicios/ex021/" class="card"><span class="icon">&#128187;</span><span class="name">Ex 021</span></a>
+        </div>
+
+        <h2 class="section-title">Desafios <span class="count">4 itens</span></h2>
+        <div class="grid">
+            <a href="Exercicios/Desafio%205/" class="card desafio"><span class="icon">&#127942;</span><span class="name">Desafio 5</span></a>
+            <a href="Exercicios/Desafio6/" class="card desafio"><span class="icon">&#127942;</span><span class="name">Desafio 6</span></a>
+            <a href="Exercicios/desafio9/" class="card desafio"><span class="icon">&#127942;</span><span class="name">Desafio 9</span></a>
+            <a href="Exercicios/desafio10/" class="card desafio"><span class="icon">&#127942;</span><span class="name">Desafio 10</span></a>
+        </div>
+
+        <footer>
+            <p>Projeto do <strong>Curso de HTML5 e CSS3</strong></p>
+            <p>Ver código no <a href="https://github.com/romeuailva-create/html-css" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+  </html>
