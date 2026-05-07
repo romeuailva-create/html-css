@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Desafio</title>
+<meta charset="UTF-8">
+<title>Fundo com imagem</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+
+    /* imagem de fundo */
+    background-image: url("espaco.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* imagem por cima */
+.imagem-topo {
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    width: 600px;
+}
+.imagem-topo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+
 </head>
 <body>
-              <img src="espaco.jpg" alt="">
+
+<img src="astronauta.png" class="imagem-topo">
+
+
+
 </body>
 </html>

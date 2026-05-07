@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Navegação</title>
+
+<style>
+  body {
+    
+    color: white;
+  }
+
+  .tela {
+    display: none;
+    height: 100vh;
+    padding-top: 50px;
+    
+  }
+
+  #cinza {
+    background: gray;
+    display: block;
+  }
+
+  #verde {
+    background: green;
+  }
+
+  #amarela {
+    background: goldenrod;
+  }
+
+  a {
+    display: block;
+    margin: 15px;
+    font-size: 20px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Tela Cinza -->
+<div id="cinza" class="tela">
+  <h1>
+    Esta é a página principal do seu site.
+    A partir dela você pode navegar para outras áreas.
+  </h1>
+
+  <a onclick="trocar('verde')">
+    ● Ir para área verde
+  </a>
+
+  <a onclick="trocar('amarela')">
+    ● Ir para área amarela
+  </a>
+</div>
+
+<!-- Tela Verde -->
+<div id="verde" class="tela">
+  <h1>Área Verde</h1>
+  <h1>Agora você está na área verde, voce acessou clicando no primeiro link da página principal.</h1>
+
+  <a onclick="trocar('cinza')">
+    ● Voltar para cinza
+  </a>
+</div>
+
+<!-- Tela Amarela -->
+<div id="amarela" class="tela">
+  <h1>Área Amarela</h1>
+  <h1>Agora você está na área amarela, voce acessou clicando no segundo link da página principal.</h1>
+
+  <a onclick="trocar('cinza')">
+    ● Voltar para cinza
+  </a>
+</div>
+
+<script>
+  function trocar(tela) {
+    document.querySelectorAll('.tela').forEach(el => {
+      el.style.display = 'none';
+    });
+
+    document.getElementById(tela).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
